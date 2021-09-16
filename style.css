@@ -42,9 +42,20 @@ body {
     border: 3px solid #fff;
     border-radius: 50%;
 }
-.banner {
+#bannerInfo {
+    display: block;
     width: 620px; 
     margin: 0 auto;
+}
+#browseOutput {
+    display: none;
+    width: 620px; 
+    height: 60vh;
+    background-color: #fff;
+    overflow-x: hidden;
+    margin: 0 auto;
+    margin-top: 70px;
+    margin-bottom: -40px;
 }
 .aboutImg {
     margin-top: 50px;
@@ -90,8 +101,15 @@ body {
     color: #000;
 }
 
+#back {
+    display: none;
+}
+
 @media screen and (max-width: 600px) {
-    .banner {
+    #bannerInfo {
+        width: 100%;
+    }
+    #browseOutput {
         width: 100%;
     }
     .about {

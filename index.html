@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/3a8665e179.js" crossorigin="anonymous"></script>
     <title>Burps&Fartss | Home</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
@@ -11,7 +12,7 @@
 <body>
     <h1 class="logo"><img src="img/logo.png" alt="LOGO" class="logo-img"> fartss<span class='and'>&</span></h1>
     <h2 class="logoTwo">burps</h2>
-    <div class="banner">
+    <div id="bannerInfo">
         <img src="img/logo.jpeg" alt="AboutImg" class="aboutImg"> 
         <div class="about">
             <p>
@@ -19,8 +20,32 @@
             </p>
         </div>
     </div>
-    <div class="navigation">
-        <button>Browse</button> <button>Sign in</button><br>
+    <div id="browseOutput">
+        <img src="img/one.jpeg" alt="ONe" style="width: 100%;">
+        <img src="img/two.jpeg" alt="ONe" style="width: 100%;">
+        <img src="img/three.jpeg" alt="ONe" style="width: 100%;">
+        <img src="img/four.jpeg" alt="ONe" style="width: 100%;">
+        
     </div>
+    <div class="navigation">
+        <button id="browse">Browse</button> <button>Sign in</button><br>
+    </div>
+
+    <script>
+        browse = document.getElementById('browse');
+        bannerInfo = document.getElementById('bannerInfo');
+        browseOutput = document.getElementById('browseOutput');
+        back = document.getElementById('back');
+
+        function showBrowse() {
+            console.log("Hello")
+            bannerInfo.style.display = 'none';
+            browseOutput.style.display= 'block';
+            browse.innerHTML='<i class="fas fa-undo-alt"></i>';
+        }
+
+
+        browse.addEventListener('click', showBrowse)
+    </script>
 </body>
 </html>
